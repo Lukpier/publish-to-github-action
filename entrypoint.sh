@@ -15,6 +15,7 @@ remote_repo="https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSIT
 git config http.sslVerify false
 git config user.name "Automated Publisher"
 git config user.email "actions@users.noreply.github.com"
+git config --global http.version HTTP/1.1
 git remote add publisher "${remote_repo}"
 git show-ref # useful for debugging
 git branch --verbose
